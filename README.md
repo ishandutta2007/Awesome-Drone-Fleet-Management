@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Drone-Fleet-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Drone-Fleet-Management?style=flat-square&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Drone-Fleet-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Drone-Fleet-Management?style=flat-square&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Drone-Fleet-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Drone-Fleet-Management?style=flat-square&color=blue" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Drone-Fleet-Management/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Drone-Fleet-Management?style=flat-square&color=green" alt="License"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Drone-Fleet-Management/commits/main"><img src="https://img.shields.io/github/last-commit/ishandutta2007/Awesome-Drone-Fleet-Management?style=flat-square&color=orange" alt="Last Commit"/></a>
@@ -62,9 +62,9 @@ Below is a detailed comparison of leading commercial platforms, **sorted by comp
 
 The open-source UAV software stack provides self-hosted alternatives, MAVLink ground station controls, autonomous flight control stacks, and swarm coordination frameworks.
 
-Below is the complete curated open-source index, **sorted by GitHub Star Count (descending)**:
+Below is the complete curated open-source index, **sorted by GitHub Stars_Count (descending)**:
 
-| 📦 Open-Source Project | ⭐ GitHub Stars | 📝 Key Capabilities & Focus |
+| 📦 Open-Source Project | ⭐ GitHub_Stars | 📝 Key Capabilities & Focus |
 | :--- | :---: | :--- |
 | **[ArduPilot](https://github.com/ArduPilot/ardupilot)** | [![Stars](https://img.shields.io/github/stars/ArduPilot/ardupilot?style=social&color=white)](https://github.com/ArduPilot/ardupilot/stargazers) | Premier open-source autopilot system supporting multirotors, fixed-wing aircraft, rovers, and subs with full telemetry & mission execution. |
 | **[PX4 Autopilot](https://github.com/PX4/PX4-Autopilot)** | [![Stars](https://img.shields.io/github/stars/PX4/PX4-Autopilot?style=social&color=white)](https://github.com/PX4/PX4-Autopilot/stargazers) | Industrial-grade open-source flight control stack for drones and uncrewed vehicles, driving PX4-compatible hardware & SITL simulators. |
