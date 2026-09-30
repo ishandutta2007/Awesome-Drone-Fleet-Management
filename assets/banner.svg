@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#07172f" />
+      <stop offset="100%" stop-color="#0d213a" />
+    </linearGradient>
+
+    <!-- Accent Gradient for Text/Shapes -->
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#00c6ff" />
+    </linearGradient>
+
+    <!-- Glowing Pill Gradient -->
+    <linearGradient id="pill-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.15)" />
+      <stop offset="100%" stop-color="rgba(79, 172, 254, 0.05)" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 242, 254, 0.05)" stroke-width="1" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulse-radar {
+      0% { r: 10px; opacity: 0.8; }
+      50% { r: 140px; opacity: 0.3; }
+      100% { r: 240px; opacity: 0; }
+    }
+    @keyframes rotate-reticle {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes float-drone-1 {
+      0% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-8px) translateX(5px); }
+      100% { transform: translateY(0px) translateX(0px); }
+    }
+    @keyframes float-drone-2 {
+      0% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(10px) translateX(-6px); }
+      100% { transform: translateY(0px) translateX(0px); }
+    }
+    @keyframes wave-signal {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .radar-ring {
+      animation: pulse-radar 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      transform-origin: 1000px 180px;
+    }
+    .radar-ring-2 {
+      animation: pulse-radar 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation-delay: 2s;
+      transform-origin: 1000px 180px;
+    }
+    .rotating-reticle {
+      animation: rotate-reticle 25s linear infinite;
+      transform-origin: 1000px 180px;
+    }
+    .drone-unit-1 {
+      animation: float-drone-1 5s ease-in-out infinite;
+    }
+    .drone-unit-2 {
+      animation: float-drone-2 6s ease-in-out infinite;
+    }
+    .signal-path {
+      stroke-dasharray: 12, 6;
+      animation: wave-signal 10s linear infinite;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="360" fill="url(#bg-grad)" rx="16" />
+  <rect width="1200" height="360" fill="url(#grid)" rx="16" />
+
+  <!-- Animated Dynamic Background Elements (Layered behind text) -->
+  <g class="background-decorations" opacity="0.6">
+    <!-- Radar Pulse Waves (Positioned on the right side) -->
+    <circle cx="1000" cy="180" r="10" fill="none" stroke="#00f2fe" stroke-width="2" class="radar-ring" />
+    <circle cx="1000" cy="180" r="10" fill="none" stroke="#00c6ff" stroke-width="1.5" class="radar-ring-2" />
+
+    <!-- Rotating Radar Reticle -->
+    <g class="rotating-reticle">
+      <circle cx="1000" cy="180" r="120" fill="none" stroke="rgba(0, 242, 254, 0.15)" stroke-width="1.5" stroke-dasharray="8 8" />
+      <circle cx="1000" cy="180" r="160" fill="none" stroke="rgba(79, 172, 254, 0.1)" stroke-width="1" />
+      <line x1="1000" y1="40" x2="1000" y2="320" stroke="rgba(0, 242, 254, 0.08)" stroke-width="1" />
+      <line x1="860" y1="180" x2="1140" y2="180" stroke="rgba(0, 242, 254, 0.08)" stroke-width="1" />
+    </g>
+
+    <!-- Dynamic Telemetry Wave Lines -->
+    <path d="M 50 290 Q 250 250 450 280 T 850 260 T 1150 290" fill="none" stroke="url(#accent-grad)" stroke-width="2" opacity="0.3" class="signal-path" />
+    <path d="M 50 310 Q 300 280 550 310 T 950 290 T 1150 320" fill="none" stroke="#00f2fe" stroke-width="1" opacity="0.2" />
+
+    <!-- Floating Drone Node 1 -->
+    <g class="drone-unit-1" transform="translate(920, 100)">
+      <circle cx="0" cy="0" r="6" fill="#00f2fe" filter="url(#subtle-glow)" />
+      <circle cx="0" cy="0" r="16" fill="none" stroke="#00f2fe" stroke-width="1" opacity="0.4" />
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#00f2fe" stroke-width="1" opacity="0.6" />
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#00f2fe" stroke-width="1" opacity="0.6" />
+      <text x="22" y="4" fill="#88d8b0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" opacity="0.8">UAV-01 [ALT: 120m]</text>
+    </g>
+
+    <!-- Floating Drone Node 2 -->
+    <g class="drone-unit-2" transform="translate(1040, 230)">
+      <circle cx="0" cy="0" r="6" fill="#4facfe" filter="url(#subtle-glow)" />
+      <circle cx="0" cy="0" r="16" fill="none" stroke="#4facfe" stroke-width="1" opacity="0.4" />
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#4facfe" stroke-width="1" opacity="0.6" />
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#4facfe" stroke-width="1" opacity="0.6" />
+      <text x="22" y="4" fill="#00f2fe" font-family="system-ui, sans-serif" font-size="11" font-weight="600" opacity="0.8">SWARM-04 [LINK: OK]</text>
+    </g>
+
+    <!-- Connecting Waypoint Dotted Line -->
+    <line x1="920" y1="100" x2="1040" y2="230" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1.5" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Foreground Content (Guaranteed crisp contrast & overlay protection) -->
+  <g class="foreground-content" transform="translate(60, 0)">
+
+    <!-- Top Badge Pill -->
+    <g transform="translate(0, 52)">
+      <rect width="240" height="30" rx="15" fill="url(#pill-grad)" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1" />
+      <circle cx="16" cy="15" r="4" fill="#00f2fe" filter="url(#subtle-glow)" />
+      <text x="28" y="20" fill="#00f2fe" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1">ULTIMATE UAV ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="142" fill="#ffffff" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5" filter="url(#glow)">
+      Awesome Drone Fleet Management
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="188" fill="#94a3b8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" width="750">
+      Curated SaaS Platforms &amp; Open-Source Projects for Mission Planning, Fleet Operations &amp; Autonomy
+    </text>
+
+    <!-- Feature Pills / Highlights -->
+    <g transform="translate(0, 230)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="165" height="34" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+        <text x="14" y="21" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">🛸 Fleet Control</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(177, 0)">
+        <rect width="185" height="34" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+        <text x="14" y="21" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">📡 MAVLink &amp; ROS</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(374, 0)">
+        <rect width="180" height="34" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+        <text x="14" y="21" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">🐝 Swarm Autonomy</text>
+      </g>
+    </g>
+  </g>
+</svg>
