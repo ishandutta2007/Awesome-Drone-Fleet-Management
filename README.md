@@ -31,6 +31,7 @@ Whether you are managing commercial surveying fleets, public safety UAV units, a
 - [🛠️ Architecture & Integration Guidance](#%EF%B8%8F-architecture--integration-guidance)
 - [🤝 How to Contribute](#-how-to-contribute)
 - [⚠️ Regulatory & Safety Disclaimer](#%EF%B8%8F-regulatory--safety-disclaimer)
+- [💖 Support](#-support)
 - [📈 Star History](#-star-history)
 
 ---
@@ -110,6 +111,27 @@ Check out [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Aw
 - Drone operations must adhere to relevant aviation regulations (such as FAA Part 107 in the US, EASA rules in Europe, or local CAA regulations).
 - BVLOS (Beyond Visual Line of Sight) and automated swarm flights require proper waiver approvals and airspace clearance (e.g., LAANC).
 - Open-source platforms (including MDS, PX4, and ArduPilot) are provided for research and development; independent field validation and safety reviews are required prior to commercial deployment.
+
+---
+
+## 💖 Support
+
+Thank you for exploring the **Awesome Drone Fleet Management** repository! Your interest and contributions help keep this ecosystem resource updated for developers, robotics engineers, and drone operators worldwide.
+
+If you find this list helpful, please consider supporting the project:
+
+- ⭐ **Star the Repository:** Click the Star button at the top right to help others discover this list.
+- 🍴 **Fork & Share:** Share this repository with fellow UAV technologists, researchers, and developers.
+- ☕ **Buy Me a Coffee:** Support ongoing maintenance and curation via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+<p align="center">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor-GitHub_Sponsors-ea4aaa?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor on GitHub" />
+  </a>
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
+  </a>
+</p>
 
 ---
 
